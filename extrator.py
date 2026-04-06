@@ -17,7 +17,7 @@ def coletar_classificacao():
         """
         data = driver.execute_script(script)
         if "standings" not in data:
-            print("❌ Erro: dados não encontrados")
+            print("Erro: dados não encontrados")
             return pd.DataFrame()
         rows = data['standings'][0]['rows']
         dados = []
@@ -41,7 +41,7 @@ def coletar_classificacao():
         return df
 
     except Exception as e:
-        print("❌ Erro:", e)
+        print("Erro:", e)
         return pd.DataFrame()
 
     finally:
